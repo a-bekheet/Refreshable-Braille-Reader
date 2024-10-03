@@ -12,7 +12,29 @@ const char *braille_patterns[26] = {
     "111010", "111110", "101110", "011010", "011110", // p-t
     "100011", "101011", "011101", "110011", "110111", // u-y
     "100111"  // z
-};
+
+    };
+
+    // Braille patterns for numbers 0-9
+    const char *braille_numbers[10] = {
+        "010110", "100000", "101000", "110000", "110100", // 0-4
+        "100100", "111000", "111100", "101100", "011000"  // 5-9
+    };
+
+    // Braille pattern for space
+    const char *braille_space = "000000";
+
+    // Braille pattern for period
+    const char *braille_period = "010011";
+
+    // Braille pattern for comma
+    const char *braille_comma = "010000";
+
+    // Braille pattern for question mark
+    const char *braille_question = "011001";
+
+    // Braille pattern for exclamation mark
+    const char *braille_exclamation = "011010";
 
 void print_braille(const char *input) {
     for (int i = 0; i < strlen(input); i++) {

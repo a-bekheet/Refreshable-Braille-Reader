@@ -69,6 +69,8 @@ void simulate_outputs(const char *input) {
     }
 }
 
+#include <unistd.h> // For sleep function
+
 void process_file(const char *filename) {
     FILE *file = fopen(filename, "r");
     if (file == NULL) {
@@ -82,6 +84,7 @@ void process_file(const char *filename) {
         printf("Processing: %s\n", buffer);
         print_braille(buffer);
         simulate_outputs(buffer);
+        sleep(0.1); // Wait for 1 second before processing the next line
     }
 
     fclose(file);

@@ -1,0 +1,16 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/bekheet/dev/Braille-Reader/braille_translator'
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _print_braille_line, symObjAddr: 0x0, symBinAddr: 0x100003768, symSize: 0x2EC }
+  - { offsetInCU: 0x4D, offset: 0x4D, size: 0x8, addend: 0x0, symName: _braille_patterns, symObjAddr: 0x7F8, symBinAddr: 0x100008000, symSize: 0x0 }
+  - { offsetInCU: 0x78, offset: 0x78, size: 0x8, addend: 0x0, symName: _braille_numbers, symObjAddr: 0x8C8, symBinAddr: 0x1000080D0, symSize: 0x0 }
+  - { offsetInCU: 0x99, offset: 0x99, size: 0x8, addend: 0x0, symName: _braille_space, symObjAddr: 0x918, symBinAddr: 0x100008120, symSize: 0x0 }
+  - { offsetInCU: 0xAE, offset: 0xAE, size: 0x8, addend: 0x0, symName: _braille_period, symObjAddr: 0x920, symBinAddr: 0x100008128, symSize: 0x0 }
+  - { offsetInCU: 0xC3, offset: 0xC3, size: 0x8, addend: 0x0, symName: _braille_comma, symObjAddr: 0x928, symBinAddr: 0x100008130, symSize: 0x0 }
+  - { offsetInCU: 0xD8, offset: 0xD8, size: 0x8, addend: 0x0, symName: _braille_question, symObjAddr: 0x930, symBinAddr: 0x100008138, symSize: 0x0 }
+  - { offsetInCU: 0xED, offset: 0xED, size: 0x8, addend: 0x0, symName: _braille_exclamation, symObjAddr: 0x938, symBinAddr: 0x100008140, symSize: 0x0 }
+  - { offsetInCU: 0x11A, offset: 0x11A, size: 0x8, addend: 0x0, symName: _print_braille_line, symObjAddr: 0x0, symBinAddr: 0x100003768, symSize: 0x2EC }
+  - { offsetInCU: 0x1A0, offset: 0x1A0, size: 0x8, addend: 0x0, symName: _translate_to_braille, symObjAddr: 0x2EC, symBinAddr: 0x100003A54, symSize: 0x288 }
+  - { offsetInCU: 0x234, offset: 0x234, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x574, symBinAddr: 0x100003CDC, symSize: 0x11C }
+...

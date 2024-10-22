@@ -1,8 +1,48 @@
+/**
+ * This Arduino sketch controls multiple servos to represent Braille patterns.
+ * It includes functions to center servos, reset pins, set individual dots, 
+ * and process serial commands for various operations.
+ *
+ * Constants:
+ * - SERVO1_PIN, SERVO2_PIN, SERVO3_PIN, SERVO4_PIN: Define the pins to which servos are connected.
+ * - MIN_PULSE_WIDTH, MAX_PULSE_WIDTH: Define the pulse width range for the servos.
+ * - MIN_ANGLE, MAX_ANGLE: Define the minimum and maximum angles for servo movement.
+ * - DOT_DOWN, DOT_UP: Define the angles representing Braille dot states.
+ * - MOVEMENT_DELAY: Define the delay for smooth servo movement.
+ *
+ * Functions:
+ * - void centerAllServos(): Centers all servos to the 90-degree position.
+ * - void resetAllPins(): Resets all pins to the down position (0 degrees).
+ * - void setDot(int dotNumber, bool state): Sets a specific dot up (true) or down (false).
+ * - void smoothMove(Servo &servo, int startAngle, int endAngle): Moves a servo smoothly from startAngle to endAngle.
+ * - void setAllServos(int angle): Moves all servos to a specific angle.
+ * - void demoPattern(): Demonstrates a predefined pattern of servo movements.
+ * - void displayBraillePattern(uint8_t pattern): Displays a Braille pattern based on the provided bit pattern.
+ * - void processSerialCommand(String command): Processes serial commands to control the servos.
+ *
+ * setup():
+ * - Initializes the serial communication for debugging.
+ * - Attaches servos to their respective pins with specified pulse widths.
+ * - Centers all servos on startup.
+ *
+ * loop():
+ * - Continuously checks for serial input and processes commands.
+ *
+ * Usage:
+ * - Send serial commands in the format "pin:state" (e.g., "1:1" to set pin 1 up).
+ * - Single-character commands:
+ *   - 'c': Center all servos.
+ *   - 'd': Run demo pattern.
+ *   - 'r': Reset all pins.
+ *   - '0': Set all pins down.
+ *   - '1': Set all pins up.
+ */
 /*
 This file needs to be in a folder with the same name as the file.
 I made a folder named ServoControl and placed this file in it.
 Arduino IDE should create this folder structure when you save a new sketch.
 */
+
 
 #include <Servo.h>
 
